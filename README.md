@@ -1,4 +1,4 @@
-# UniMAP-pretrain
+# UniMAP code
 
 
 The code is based on huggingface transformers(4.9.2), [chemBerta](https://github.com/seyonechithrananda/bert-loves-chemistry)  ,and [C5T5](https://github.com/dhroth/c5t5).
