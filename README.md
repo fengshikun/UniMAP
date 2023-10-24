@@ -1,5 +1,9 @@
 # UniMAP code
 
+This is the offical implementation of paper "UniMAP: Universal SMILES-Graph Representation Learning", arxiv link: [https://arxiv.org/abs/2310.14216](https://arxiv.org/abs/2310.14216)
+
+
+
 
 The code is based on huggingface transformers(4.9.2), [chemBerta](https://github.com/seyonechithrananda/bert-loves-chemistry)  ,and [C5T5](https://github.com/dhroth/c5t5).
 
@@ -22,7 +26,14 @@ The scrpits in ./download_pubchem are for downlaoding data from [pubchem](https:
 python -u -m torch.distributed.launch --nproc_per_node 8 --master_port 1233 train_multimodal_uni.py --run_name unimap_pretrain --dataset_path pubchme_smiles_file.lst --logging_steps 5 --tokenizer_path iupac_regex/ --smiles_tokenizer_path smiles_tokenizer/ --num_train_epochs 40 --output_dir unimap_pretraining --per_device_train_batch_size 64 --atom_vocab_file vocab/Merge_vocab.pkl --atom_vocab_size 10535  --function_group_file fg_labels.npy --finger_print_file ecfp_regression.npy --mlm_probability 0.2 --smiles_only --get_frag --pooler_type avg --fp16 --gnn_number_layer 3 --graph_max_seq_size 128 --mlm_group_probability 0.6 --gnn_dropout 0 --check_frag
 ```
 
+We also provide the pre-trained model at link: [https://drive.google.com/drive/folders/1No_qAn7wqaaJ_Vb393AzmoVzhkyU6Tv6?usp=sharing](https://drive.google.com/drive/folders/1No_qAn7wqaaJ_Vb393AzmoVzhkyU6Tv6?usp=sharing)
+
+
+
+
 ### Fine-tuning(MoleculeNet and DTA):
+
+
 
 
 test_gnn_smiles_uni_avg_srun.sh
