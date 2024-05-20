@@ -1,6 +1,6 @@
 # UniMAP code
 
-This is the offical implementation of paper "UniMAP: Universal SMILES-Graph Representation Learning", arxiv link: [https://arxiv.org/abs/2310.14216](https://arxiv.org/abs/2310.14216)
+This is the offical implementation of paper "UniMAP: Universal SMILES-Graph Representation Learning"
 
 
 
